@@ -1,0 +1,644 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #010326;
+  }
+  .container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .full-width{
+    width: 100% !important;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .height-93vh{
+    height: 93vh !important;
+  }
+  .margin-16px{
+    margin: 16px 0;
+  }
+  .box-shadow{
+    box-shadow: 4px 10px 18px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+  }
+  .button{
+    padding: 14px 60px;
+    border: none;
+    background: #fce8e9;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: ease-out 0.3s;
+  }
+  .button:hover{
+    box-shadow: 0 12px 16px 0 rgba(252,232,233,0.4), 0 17px 50px 0 rgba(252,232,233,0.3);
+  }
+  p{
+    font-size: 1.1em;
+  }
+  .containerHome{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  body{
+    background-color: #fff;
+    height: 100vh;
+  }
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  .containerAbout{
+    overflow: hidden;
+  }
+  .svgImg{
+    position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 0;
+     display: block;
+  }
+  .svgImg-about{
+      position: absolute;
+      top: -3px !important;
+  }
+  .svgImg-mobile{
+      display: none;
+  }
+  /* Burger Menu */
+  #burger{
+    position: absolute;
+    z-index: 4;
+    display: block;
+    padding: 14px 9px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    background: #fce8e9;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+}
+#burger:hover{
+    transform: scale(1.1);
+    
+}
+.active{
+  opacity: 1;
+}
+.line{
+    background-color: #010326;
+    transition: 0.5s;
+    height: 2px;
+    margin: 5px;
+    display: block;
+    border-radius: 2px;
+    position: relative;
+    width: 26px;
+}
+  #toggle-menu{
+    display: none;
+  }
+  #toggle-menu:checked~nav#mobile-menu{   
+    transform: translate3d(0, 0, 0);
+    height: 100vh;
+    z-index: 3;
+    position: fixed;
+    background: #fce8e9;
+  }
+  #toggle-menu:checked~nav ul{
+    opacity: 0;
+    animation: slideIn2 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+  }
+  #toggle-menu:checked~nav ul li:nth-child(1), #toggle-menu:checked~nav ul li:nth-child(2), #toggle-menu:checked~nav ul li:nth-child(3) {
+    opacity: 0;
+    animation: nav-li-fadin 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-fill-mode: forwards;
+  }
+  #toggle-menu:checked~nav ul li:nth-child(1){
+    animation-delay: 0.15s;
+  }
+  #toggle-menu:checked~nav ul li:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  #toggle-menu:checked~nav ul li:nth-child(3) {
+    animation-delay: 0.45s;
+  }
+  .header-container{
+    position: relative;
+  }
+  .header-container input#toggle-menu:checked~label span#line1.line{
+    transform: translateY(7px) rotate(135deg);
+  }
+  .header-container input#toggle-menu:checked~label span#line2.line{
+    transform: scale(0);
+  }
+  .header-container input#toggle-menu:checked~label span#line3.line{
+    transform: translateY(-7px) rotate(-135deg);
+  }
+  .header-container input#toggle-menu:checked~label#burger{
+    background: #fff;
+  }
+  #mobile-menu{
+    display: block;
+    width: 100vw;
+    height: 0vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 1;
+    transition:0.5s ease-in;
+    transform: translate3d(0, 0, 110%);
+  }
+
+
+  ul{
+    text-align: center;
+    margin-top: 12vh;
+  }
+  ul li a{
+    font-size: 5em;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+  }
+  li{
+    margin-top: 5vh;
+  }
+  li a{
+    border-bottom: 1px transparent #fff;
+    transition: all 0.2s ease-in-out;
+    
+  }
+  ul li a, ul li{
+    opacity: 0.3;
+    transition: 0.3s ease-out;
+  }
+  ul:hover li a:hover {
+    opacity: 1;
+   
+  }
+  ul li:hover{
+    transform: scale(1.2);
+  }
+  /* ---- burger menu end ------ */
+  h1{
+    text-align: center;
+  }
+  .row {
+    width: 100%;
+  }
+  /*NAVIGATION */
+  .logo{
+    font-family: 'Playfair Display', serif;
+    z-index: 1;
+    margin-top: 25px;
+    position: relative;
+  }
+  
+  /* HOME PAGE */
+  
+  .intro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 72%;
+  }
+  p.Pdescr{
+    text-align: center;
+    font-size: 1.4em;
+    z-index: 1;
+    position: relative;
+  }
+  .p-fadein{
+    animation: fadeInP 1.5s;
+    overflow: hidden;
+    animation-delay: 1.2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+  .image-load{
+    animation: imageLoad 1.2s;
+    animation-delay: 1s;
+    visibility: hidden;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+  }
+  .h1-home{
+    text-align: center;
+    font-size: 12em;
+    margin-top: 18vh;
+    color: #010326;
+    font-family: 'Playfair Display', serif;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .H1fadeIn{
+    animation: 
+    slideIn1 2.2s;
+    white-space: nowrap;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    animation-delay: 0.4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+  .logo a{
+    font-size: 1.4em;
+    color: #010326;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+  }
+
+  
+  /* ABOUT PAGE */
+  .containerAbout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+  }
+  .aboutMe{
+    width: 40%;
+    z-index: 1;
+    position: relative;
+  }
+  .pic{
+    width: 38%;
+    z-index: 1;
+    position: relative;
+  }
+  .pic-iphone{
+    margin-top: 30px;
+    width: 52%;
+  }
+  .pic-iphone-x{
+    width: 38%;
+  }
+  .iphone-x-pic{
+    width: 64% !important;
+  }
+  .pic img{
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    border-radius: 20px;
+  }
+  /* APEL PROJECT PAGE */
+  .pic-apel{
+    align-self: stretch;
+    width: 52% !important;
+    padding: 18px;
+  }
+  .pic-apel img{
+    box-shadow: 4px 10px 18px rgba(0, 0, 0, 0.16);
+  }
+  .container-apel{
+    align-items: start !important;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    padding: 5px;
+  }
+  /* APEL PROJECT PAGE END */
+
+  h2{
+    z-index: 1;
+    position: relative;
+    text-align: left;
+    font-size: 4.5em;
+    font-family: 'Playfair Display', serif;
+  }
+  h4{
+    font-size: 1.8em;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 0;
+  }
+  .font-weight-100{
+    font-weight: 100;
+  }
+  .aboutDescr{
+    text-align: left;
+    margin-top: 1vw;
+    line-height: 2;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* PROJECTS PAGE */
+  .margin-top{
+    margin-top: 100px;
+  }
+  .padding-left{
+    margin-left: 30px;
+  }
+  .projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  .project{
+    cursor: pointer;
+    width: 46%;
+    height: 66vh;
+    box-shadow: 4px 10px 18px rgba(0, 0, 0, 0.16);
+    z-index: 1;
+    background-color: #f4f5fa;
+    position: relative;
+    margin-bottom: 8%;
+    border-radius: 20px;
+    position: relative;
+    background-size: cover;
+    transition: ease-in-out 0.2s;
+    
+  }
+
+  .project:hover{
+    box-shadow: 4px 10px 49px rgba(0, 0, 0, 0.16);
+  }
+  .project-overlay{
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(transparent 20%, white 80%);
+  }
+  .overlay-text{
+    position: absolute;
+    bottom: 0;
+    top: 72%;
+  }
+  .jamt-background-img{
+    background-image: url("images/JAMT-mockup.png");
+  }
+  .travel-background-img{
+    background-image: url("images/travel-app-mockups.png");
+  }
+  .kiropraktor-background-img{
+    background-image: url("images/kiropraktor-saeby-mockups.png");
+  }
+  .apel-background-img{
+    background-image: url("images/guldsmed-mockups.png");
+  }
+  .jamt-bg-color{
+    background-color: #7c7dfb;
+  }
+  .apel-bg-color{
+    background-color: rgba(232, 192, 97, 0.5);
+  }
+  .kiro-bg-color{
+    background-color: #d1f8fc;
+  }
+  .travel-bg-color{
+    background-color: #fdfaf4;
+  }
+  .vertical-align-top{
+    vertical-align: top;
+  }
+
+  @media all and (max-width: 1024px){
+    html{
+      position: relative;
+    }
+    body{
+      overflow: auto;
+    }
+    .container{
+      width: 85%;
+    }
+    .height-93vh{
+      height: auto !important;
+      padding: 50px 0;
+    }
+    .margin-mobile{
+      margin: 25px 0;
+    }
+    /* SVG MOBILE */
+    .svgImg-mobile{
+        display: block;
+        position: absolute;
+        top: -5px;
+        left: 0;
+    }
+    .svg-about-mobile{
+      display: block;
+      position: absolute;
+      top: -6px !important;
+      left: 7px !important;
+    }
+    .svgImg{
+        display: none;
+    }
+    /* FONTS */
+    h1{
+      font-size: 10em !important;
+    }
+    h2{
+      font-size: 3.5em;
+    }
+    p.Pdescr{
+      font-size: 1.6em;
+    }
+    /* PROJECTS PAGE */
+    .project{
+      height: 40vh;
+    }
+    .container-apel{
+      padding: 55px 0;
+    }
+    
+  }
+
+  @media all and (max-width: 850px){
+    
+    /* FONTS */
+    p.Pdescr{
+        padding: 15px;
+        font-size: 1em;
+        margin: 0 15px 0 15px;
+    }
+    p{
+      font-size: 1em;
+    }
+    .h3FontSize{
+      font-size: 2em;
+      text-align: inherit;
+    }
+    h2{
+      font-size: 2.2em !important;
+    }
+    h1{
+      font-size: 4em !important;
+    }
+    /* NAV */
+    .header-container{
+      width: 85vw;
+      margin: 16px auto;
+      position: relative;
+    }
+    #burger{
+        padding: 11px 6px;
+        top: -4px;
+        transform: scale(0.9);
+    }
+    li#one{
+        margin-top: 20vh;
+    }
+    ul li a{
+        font-size: 3em;
+    }
+    .logo{
+        margin-top: 25px;
+    }
+    .burgerWrap{
+      width: 45px;
+      z-index: 1;
+      position: relative;
+      margin: 25px 25px 0 0;
+    }
+   
+    /* HOME PAGE */
+    .logo{
+        z-index: 1;
+    }
+    .intro{
+        grid-area: intro;
+        animation: fadeIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .descr{
+        grid-area: descr;
+        text-align: center;
+    }
+    
+   
+    /* ABOUT PAGE / PROJECTS PAGE */
+    .containerAbout, .projects-container, .container-apel{
+      flex-direction: column;
+      align-items: inherit;
+      height: auto;
+    }
+    .projects-container{
+      margin-top: 25px;
+    }
+    .container-apel{
+          padding: 20px 0;
+    }
+    div.sticky{
+      position: initial;
+    }
+    .aboutMe, .pic, .project{
+      width: 100%;
+    }
+    .pic-apel{
+      padding: 17px;
+      margin-left: -17px;
+      width: 100% !important;
+    }
+    .project{
+      height: 54vh;
+    }
+    .margin-top{
+      margin-top: 20px;
+    }
+    .overflow-hidden{
+      overflow: initial;
+    }
+    .font-weight-100{
+      font-size: 1.1em;
+    }
+    
+    /* INDIVIDUAL PROJECTS PAGE */
+    .pic.full-width{
+      width: 100vw !important;
+      margin-left: -9%;
+    }
+    .jamt-bg-color.box-shadow, .apel-bg-color.box-shadow,
+    .kiro-bg-color.box-shadow, .travel-bg-color.box-shadow{
+      box-shadow: none;
+      border-radius: 0px;
+      margin-top: 30px;
+    }
+    .pic-iphone{
+      margin: 14px 0;
+    }
+    .pic-iphone-x{
+      text-align: center;
+    }
+    .iphone-x-pic{
+      width: 70% !important;
+    }
+    
+  }
+
+  /* --- h1 gradient animation end ---- */
+  
+  @keyframes slideIn1{
+    from { 
+      width: 0%;
+      visibility: visible;
+    }
+    to { 
+      width: 100%;
+      visibility: visible; 
+    }
+  }
+
+  @keyframes fadeInP{
+    from { 
+      opacity: 0;
+      visibility: hidden;
+    }
+    to { 
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @keyframes imageLoad{
+    from {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.9);
+    }
+    to{
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideIn2{
+    0%{
+        height: 0%;
+        opacity: 0;
+    }
+    100%{
+        height: 100%;
+        opacity: 1;
+    }
+  }
+
+  @keyframes nav-li-fadin{
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+  }
+  
