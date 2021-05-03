@@ -50,7 +50,7 @@
     background-color: #F04E26;
     color: #fff;
   }
-  .button a:hover {
+  .button:hover a {
     color: #fff;
   }
   p{
@@ -70,6 +70,17 @@
   .containerAbout{
     overflow: hidden;
   }
+  /* Social Media */
+  .social-media {
+    position: fixed;
+    bottom: 2vh;
+    left: 2.5%;
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+  }
+
+  /* Background SVG */
   .svg-img{
     position: absolute;
     top: 0;
