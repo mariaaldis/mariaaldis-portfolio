@@ -73,11 +73,32 @@
   /* Social Media */
   .social-media {
     position: fixed;
-    bottom: 2vh;
-    left: 2.5%;
+    left: 2.4%;
+    top: 0;
+    width: 24px;
     display: flex;
     flex-direction: column;
-    width: 24px;
+    justify-content: center;
+    height: 100vh;
+  }
+  .social-media a {
+    margin-bottom: 10px;
+    color: none;
+  }
+  .social-media a svg path {
+    transition: 0.15s ease-in;
+  }
+  .social-media a:hover svg path {
+    fill: #F04E26;
+  }
+  .social-media span {
+    border-left: 1px solid #101341;
+    height: 120px;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    width: 2px;
+    margin-bottom: 10px;
   }
 
   /* Background SVG */
@@ -274,13 +295,15 @@
     animation-delay: 1.2s;
     visibility: hidden;
     animation-fill-mode: forwards;
+    animation-delay: 0.2s
   }
   .image-load{
     animation: imageLoad 1.2s;
     animation-delay: 1s;
     visibility: hidden;
-    overflow: hidden;
+    opacity: 0;
     animation-fill-mode: forwards;
+    animation-delay: 0.2s
   }
   .h1-home{
     font-size: 7em;
@@ -288,10 +311,14 @@
     font-family: 'Playfair Display', serif;
   }
   .logo a{
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #101341;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    transition: 0.15s ease-in;
+  }
+  .logo a:hover {
+    color: #F04E26;
   }
   
   /* ABOUT PAGE */
@@ -616,19 +643,6 @@
       width: 70% !important;
     }
     
-  }
-
-  /* --- h1 gradient animation end ---- */
-  
-  @keyframes slideIn1{
-    from { 
-      width: 0%;
-      visibility: visible;
-    }
-    to { 
-      width: 100%;
-      visibility: visible; 
-    }
   }
 
   @keyframes fadeInP{
