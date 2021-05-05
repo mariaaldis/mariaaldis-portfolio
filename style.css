@@ -39,6 +39,13 @@
     transition: ease-out 0.3s;
     font-weight: 500;
   }
+  .link {
+    font-weight: 700;
+    transition: 0.15s ease-in;
+  }
+  .link:hover {
+    color: #F04E26;
+  }
   .button a {
     color: #F04E26;
   }
@@ -67,7 +74,7 @@
   .overflow-hidden{
     overflow: hidden;
   }
-  .containerAbout{
+  .container-about{
     overflow: hidden;
   }
   /* Social Media */
@@ -322,16 +329,14 @@
   }
   
   /* ABOUT PAGE */
-  .containerAbout{
+  .container-about{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80%;
+    height: 100vh;
   }
-  .aboutMe{
+  .row{
     width: 40%;
-    z-index: 1;
-    position: relative;
   }
   .pic{
     width: 38%;
@@ -393,12 +398,15 @@
   .font-weight-100{
     font-weight: 100;
   }
-  .aboutDescr{
+  .description {
     text-align: left;
     margin-top: 1vw;
     line-height: 2;
     z-index: 1;
     position: relative;
+  }
+  .description p {
+    margin-bottom: 20px;
   }
   
   /* PROJECTS PAGE */
@@ -587,7 +595,7 @@
     
    
     /* ABOUT PAGE / PROJECTS PAGE */
-    .containerAbout, .projects-container, .container-apel{
+    .container-about, .projects-container, .container-apel{
       flex-direction: column;
       align-items: inherit;
       height: auto;
@@ -596,12 +604,12 @@
       margin-top: 25px;
     }
     .container-apel{
-          padding: 20px 0;
+      padding: 20px 0;
     }
     div.sticky{
       position: initial;
     }
-    .aboutMe, .pic, .project{
+    .row, .pic, .project{
       width: 100%;
     }
     .pic-apel{
