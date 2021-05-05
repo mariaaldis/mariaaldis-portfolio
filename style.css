@@ -261,7 +261,6 @@
   }
   
   /* HOME PAGE */
-  
   .intro{
     display: flex;
     justify-content: center;
@@ -278,6 +277,24 @@
     line-height: 1.3em;
     max-width: 500px;
   }
+
+  .intro p:nth-child(1) {
+    animation-delay: 0.6s;
+  }
+
+  .intro h1 {
+    animation-delay: 0.8s;
+  }
+
+  .intro p:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+
+  .intro button {
+    opacity: 0;
+    animation-delay: 1.1s;
+  }
+
   .intro-emphasis {
     color: #F04E26;
     font-weight: 500;
@@ -296,26 +313,26 @@
   .large-font {
     font-size: 5em;
   }
-  .p-fadein{
+  .p-fadein {
     animation: fadeInP 1.5s;
-    overflow: hidden;
-    animation-delay: 1.2s;
     visibility: hidden;
     animation-fill-mode: forwards;
-    animation-delay: 0.2s
+    animation-delay: 0.2s;
+    opacity: 0;
   }
-  .image-load{
+  .fade-slide-in {
+    animation: fade-slide-aniamtion 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  .image-load {
     animation: imageLoad 1.2s;
-    animation-delay: 1s;
     visibility: hidden;
     opacity: 0;
     animation-fill-mode: forwards;
     animation-delay: 0.2s
-  }
-  .h1-home{
-    font-size: 7em;
-    color: #101341;
-    font-family: 'Playfair Display', serif;
   }
   .logo a{
     font-size: 1.5em;
@@ -334,6 +351,13 @@
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+  }
+  .container-about .fade-slide-in {
+    animation-delay: 0.6s;
+  }
+
+  .container-about .p-fadein, img.p-fadein {
+    animation-delay: 0.6s;
   }
   .row{
     width: 40%;
@@ -416,11 +440,15 @@
   .padding-left{
     margin-left: 30px;
   }
+  .projects h2, .projects p {
+    animation-delay: 0.4s;
+  }
   .projects-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 60px;
+    animation-delay: 0.6s;
   }
   .project{
     cursor: pointer;
@@ -435,7 +463,6 @@
     position: relative;
     background-size: cover;
     transition: ease-in-out 0.2s;
-    
   }
 
   .project:hover{
@@ -661,6 +688,19 @@
     to { 
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  @keyframes fade-slide-aniamtion {
+    from { 
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
   }
 
