@@ -82,7 +82,6 @@
     position: fixed;
     left: 2.4%;
     top: 0;
-    width: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,6 +90,7 @@
   .social-media a {
     margin-bottom: 10px;
     color: none;
+    width: 24px;
   }
   .social-media a svg path {
     transition: 0.15s ease-in;
@@ -191,7 +191,6 @@
     top: 2vh;
     left: 0;
     right: 0;
-    width: 95%;
     z-index: 3;
   }
   .header-container input#toggle-menu:checked~label span#line1.line{
@@ -545,9 +544,6 @@
         display: none;
     }
     /* FONTS */
-    h1{
-      font-size: 10em !important;
-    }
     h2{
       font-size: 3.5em;
     }
@@ -582,19 +578,20 @@
     h2{
       font-size: 2.2em !important;
     }
-    h1{
-      font-size: 4em !important;
+    .large-font {
+      font-size: 4em;
     }
     /* NAV */
-    .header-container{
-      width: 90% !important;
+    .header-container {
+      width: 85%;
       margin: 16px auto;
       position: relative;
+      margin-bottom: 40px;
     }
     #burger{
-        padding: 11px 6px;
-        top: -4px;
-        transform: scale(0.9);
+      padding: 11px 6px;
+      top: -4px;
+      transform: scale(0.9);
     }
     li#one{
         margin-top: 20vh;
@@ -607,6 +604,24 @@
       z-index: 1;
       position: relative;
       margin: 25px 25px 0 0;
+    }
+
+    /* SOCIAL MEDIA ICONS */
+    .social-media span {
+      display: none;
+    }
+    .social-media {
+      position: initial;
+      margin: 0 auto;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      height: auto;
+      width: 80%;
+    }
+    .social-media a {
+      margin-right: 14px;
     }
    
     /* HOME PAGE */
@@ -678,6 +693,30 @@
       width: 70% !important;
     }
     
+  }
+
+  @media all and (max-width: 600px) {
+    .large-font {
+      font-size: 2em;
+    }
+    h4 {
+      font-size: 1.4em;
+    }
+    .font-weight-100 {
+      font-size: 1em;
+    }
+
+    main.container {
+      margin-top: 30px;
+    }
+    .intro {
+      height: 80vh;
+      width: 80%;
+    }
+    .pic.full-width {
+      margin-left: -13%;
+      margin-right: -13%;
+    }
   }
 
   @keyframes fadeInP{
